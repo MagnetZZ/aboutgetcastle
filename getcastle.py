@@ -2,11 +2,12 @@
 import numpy as np
 import math
 
+# this is a try of using atom-git
 def countcastle(idlist, idnum):
-	x0 = idlist[:,0].copy() 
+	x0 = idlist[:,0].copy()
 	y0 = idlist[:,1].copy()
-	# x0 = [(idlist[i][0]) for i in range(idnum)] # sorted by x 
-	# y0 = [(idlist[i][1]) for i in range(idnum)] # Ç³¿½±´
+	# x0 = [(idlist[i][0]) for i in range(idnum)] # sorted by x
+	# y0 = [(idlist[i][1]) for i in range(idnum)] # Ç³ï¿½ï¿½ï¿½ï¿½
 	x1,y1 = x0,y0
 	# print(x0.shape)
 	# print(idlist[:,0])
@@ -21,7 +22,7 @@ def countcastle(idlist, idnum):
 	dist1 = dist
 	dist1 = dist1[np.argsort(dist)] # sorted distance: form 0 to max
 	# print(dist1)
-	x2 = x1[np.argsort(dist)]  # sort id by distance 
+	x2 = x1[np.argsort(dist)]  # sort id by distance
 	y2 = y1[np.argsort(dist)]  # sort id by distance
 	for i in range(idnum-2, -1, -1):
 		print(i)
@@ -36,7 +37,7 @@ def countcastle(idlist, idnum):
 			Ncas = i+1
 			return Ncas
 		if i == 0:
-			return 1 
+			return 1
 
 # def getcastle():
 if __name__ == '__main__':
@@ -56,4 +57,3 @@ if __name__ == '__main__':
 	# print(idlist[1:4,0])
 	Ncas = countcastle(idlist, idnum)
 	print('The number of castle is %d'%Ncas)
-
